@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	int a=10;
+	printf("initial value=%d\n",a);
+	a+=10;
+	printf("a+=:%d\n",a);
+	a-=5;
+	printf("a-=;%d\n",a);
+	printf("pre increment(++a)=%d\n",++a);
+	printf("post decrement(a--)=%d\n",a--);
+	printf("final value=%d\n",a);
+}
