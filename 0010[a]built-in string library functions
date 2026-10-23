@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char str1[100],str2[100],copy[100],combined[200];
+	int result;
+	
+	printf("enter the first string:");
+	scanf("%[^\n]",str1);
+	
+	printf("enter the second string:");
+	scanf("%[^\n]",str2)
+	
+	printf("\nlength of first string=%zu\n",strlen(str1));
+	printf("\nlength of second string=%zu\n",strlen(str2));
+	
+	strcpy(combined,str1);
+	strcat(combined,str2);
+	printf("concatenated string=%s\n",combined);
+	
+	result=strcmp(str1,str2);
+	
+	if(result==0)
+	 printf("both string are equal.\n");
+	else if(result<0)
+	 printf("first string comes before second string\n");
+	else
+	 printf("first string comes after second string.\n");
+	 
+	 {
+	 	char ch;
+	 	char*position;
+	 	
+	 	printf("\nenter a character to search in the first string:");
+	 	scanf("%c",&ch);
+	 	
+	 	if(position!=null)
+	 	 printf("character found at position %ld.\n",(long)(position-str1+1));
+	 	 else
+	 	 printf("character not found.\n");
+	 }
+	  
+	 
+}
