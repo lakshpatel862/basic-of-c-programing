@@ -1,0 +1,96 @@
+#include<stdio.h>
+int add(int,int);
+int substract(int,int);
+int multiply(int,int);
+float divide(int,int);
+int factorial(int);
+
+int main()
+
+{
+	int a,b,choice;
+	
+	printf("enter two integers:");
+	scanf("%d%d",&a,&b);
+	
+	printf("\n-----mathematical operations----\n");
+	printf("1.addition\n");
+	printf("2.substraction\n");
+	printf("3.multiplication\n");
+	printf("4.division\n");
+	printf("5.factorial of first number\n");
+	
+	printf("enter your choice:");
+	scanf("%d,&choice");
+	
+	switch(choice)
+	{
+		case 1:
+		
+		printf("addition=%d\n",add(a,b));
+		breakl;
+		
+	    case 2:
+	
+		printf("substaraction=%d\n",substract(a,b));
+		break;
+		
+		case 3:
+		
+		printf("multiplication=%d\n",multiply(a,b));
+		break;
+		
+		case 4:
+		
+		if(b!=0)
+		  printf("division=%.2f\n",divide(a,b));
+		else
+		printf("division by zero is not allowed.\n");
+		break;
+		
+		case 5:
+		
+		if(a<0||a>12)
+		 printf("enter a number from 0 to 12 for factorial\n");
+		else
+		 printf("factorial=%d\n",factorial(a));
+		 break;
+		 
+		 default:
+		  printf("invalid chice.\n"); 
+		  
+		      
+	}
+	return 0;
+}
+
+  int add(int x,int y)
+  {
+  	return x+y;
+  }
+  
+  int substract(int x,int y)
+  {
+  	return x-y;
+  }
+  
+  int multiply(int x,int y)
+  {
+  	return x*y;
+  }
+  
+  float divide(int x,int y)
+  {
+  	return(float)x/y;
+  }
+  
+  int factorial(int n)
+  {
+  	int i,fact=1;
+  	
+  	for(i=1;i<=n;i++)
+  	{
+  		fact=fact*i;
+	  }
+	  return fact;
+  }
